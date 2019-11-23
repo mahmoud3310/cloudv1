@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org/" >
+<head>
+<meta charset="ISO-8859-1">
+<title>Accueil</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/Style.css}"/>
+</head>
+<body>
+
+
+<h1>Acuueill</h1>
+<h2>TEST h2</h2>
+<ul>
+<li th:text="${ec}">nom de votre ecole</li>
+<li th:text="${forma}"> Intitule de formation</li>
+
+<ul th:each = "name : ${names}">
+
+<li th:text="${name}">...</li>
+
+</ul>
+
+
+</ul>
+
+
+ 
+ <ul th:each = "a : ${anim}">
+ 
+ <li>
+ <p>
+ 
+ <span th:text = "${a.nom}"></span>
+ <span th:text = "${a.age}"></span>
+ 
+ </p>
+ </li>
+ 
+ </ul>
+ 
+ <p>
+ <span th:text = "${msg}" ></span>
+ <span th:text = "${version}" ></span>
+ </p>
+ 
+</body>
+</html>
